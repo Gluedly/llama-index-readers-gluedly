@@ -5,7 +5,7 @@ LlamaIndex `BaseReader` that loads Gluedly scrape snapshots as `Document` object
 ## Install
 
 ```bash
-pip install -e ".[dev]"
+pip install llama-index-readers-gluedly
 ```
 
 ## Usage
@@ -28,9 +28,16 @@ export GLUEDLY_PAGE_ID=12
 python examples/load_data.py
 ```
 
-## Tests
+## Development
+
+Install with test dependencies:
 
 ```bash
 pip install -e ".[dev]"
+```
+
+Run tests:
+
+```bash
 pytest
 ```

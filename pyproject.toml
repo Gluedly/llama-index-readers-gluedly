@@ -1,0 +1,28 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "llama-index-readers-gluedly"
+version = "0.1.0"
+description = "LlamaIndex reader for Gluedly scrape snapshots"
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+dependencies = [
+  "llama-index-core>=0.12.0",
+  "requests>=2.31.0",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8.0.0",
+  "responses>=0.25.0",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/llama_index_readers_gluedly"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
